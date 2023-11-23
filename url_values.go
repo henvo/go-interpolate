@@ -7,6 +7,10 @@ import (
 	"strings"
 )
 
+// FromURLValues will perform string interpolation on a
+// given string and url.Values.
+// Important note: only the first value for a given
+// key is used.
 func FromURLValues(s string, values url.Values) string {
 	re := regexp.MustCompile(`%{(.*?)\}`)
 

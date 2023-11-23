@@ -6,6 +6,11 @@ import (
 	"strings"
 )
 
+// FromMap will perform string interpolation on a given string
+// and map with string keys and interface{} value.
+// In order to be able to interpolate variables with values
+// of the given map the keys to the values need to be wrapped
+// with a percentage sign and curly bracketts `%{}`
 func FromMap(s string, m map[string]interface{}) string {
 	re := regexp.MustCompile(`%{(.*?)\}`)
 
