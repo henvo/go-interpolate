@@ -3,6 +3,8 @@ A small tool for easy string interpolation in golang.
 
 ## Usage
 
+### Values from `map[string]interface{}`
+
 ``` go
 import (
   "fmt"
@@ -19,7 +21,28 @@ func main() {
 }
 ```
 
-Should print:
+Will print:
 
 > Hello Bob! You've got mail! 
 
+### Values from `url.Values`
+
+``` go
+import (
+  "fmt"
+  "net/url"
+  "github.com/henvo/go-interpolate"
+)
+
+func main() {
+  m := make(url.Values)
+  m.Add("name", "Bob")
+  m.Add("message", "You've got mail!")
+
+  fmt.Println(interpolate.FromURLValues("Hello %{name}! %{message}"))
+}
+```
+
+Will print:
+
+> Hello Bob! You've got mail!
