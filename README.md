@@ -1,6 +1,9 @@
 # go-interpolate
 A small tool for easy string interpolation in golang.
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/henvo/go-interpolate.svg)](https://pkg.go.dev/github.com/henvo/go-interpolate)
+
+
 ## Usage
 
 ### Values from `map[string]interface{}`
