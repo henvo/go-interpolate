@@ -1,6 +1,7 @@
 # go-interpolate
 [![Go Reference](https://pkg.go.dev/badge/github.com/henvo/go-interpolate.svg)](https://pkg.go.dev/github.com/henvo/go-interpolate)
 [![codecov](https://codecov.io/gh/henvo/go-interpolate/graph/badge.svg?token=7ROIVRP5C0)](https://codecov.io/gh/henvo/go-interpolate)
+[![test](https://github.com/henvo/go-interpolate/actions/workflows/test.yml/badge.svg)](https://github.com/henvo/go-interpolate/actions/workflows/test.yml)
 
 A small tool for easy string interpolation in golang.
 
