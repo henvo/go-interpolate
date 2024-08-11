@@ -21,7 +21,7 @@ func main() {
     "message": "You've got mail!"
   }
 
-  fmt.Println(interpolate.FromMap("Hello %{name}! %{message}"))
+  fmt.Println(interpolate.FromMap("Hello %{name}! %{message}", m))
 }
 ```
 
@@ -43,7 +43,7 @@ func main() {
   m.Add("name", "Bob")
   m.Add("message", "You've got mail!")
 
-  fmt.Println(interpolate.FromURLValues("Hello %{name}! %{message}"))
+  fmt.Println(interpolate.FromURLValues("Hello %{name}! %{message}", m))
 }
 ```
 
