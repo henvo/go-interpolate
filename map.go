@@ -21,7 +21,7 @@ func FromMap(s string, m map[string]interface{}) string {
 			val = ""
 		}
 
-		s = strings.Replace(s, sm[0], fmt.Sprintf("%s", val), -1)
+		s = strings.Replace(s, sm[0], fmt.Sprint(val), -1)
 	}
 
 	return s

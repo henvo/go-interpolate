@@ -34,10 +34,12 @@ func TestFromMapMultiValues(t *testing.T) {
 	m := make(map[string]interface{})
 
 	m["type"] = "Info"
-	m["message"] = "You got mail!"
+	m["pre"] = "You've got"
+	m["post"] = "mails!"
+	m["count"] = 3
 
-	result := FromMap("%{type}: %{message}", m)
-	expected := "Info: You got mail!"
+	result := FromMap("%{type}: %{pre} %{count} %{post}", m)
+	expected := "Info: You've got 3 mails!"
 
 	if result != expected {
 		t.Fatalf("Expected: '" + expected + "'. But got: '" + result + "'")
